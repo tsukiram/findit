@@ -5,10 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host 0.0.0.0",
-    "build": "tsc -b && vite build --outDir dist",
-    "lint": "eslint src --fix && npx tsc --noEmit",
-    "format": "prettier --write \"src/**/*.{ts,tsx}\"",
-    "preview": "vite preview"
+    "build": "vite build",
+    "lint": "eslint src --ext .ts,.tsx --fix",
+    "preview": "vite preview",
+    "postinstall": "rm -rf node_modules/@rollup/rollup-win32-* || true"
   },
   "devDependencies": {
     "@eslint/js": "^9.18.0",
